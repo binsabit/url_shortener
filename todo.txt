@@ -1,0 +1,5 @@
+ - Create RESTful API
+ - Create database
+ - Database migrations!!!
+ - Come up with shotener alogrithm(probably random string generator) 
+ - Authorization system to manage(delete, disable, update) saved links
