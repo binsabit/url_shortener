@@ -1,11 +1,6 @@
 package data
 
-type URL struct {
-	ID      int
-	LongVer string
-	SrtVer  string
-	UserID  int
-}
+import "github.com/binsabit/url_shortener/internal/repository/data/models"
 
 type User struct {
 	ID       int
@@ -14,16 +9,9 @@ type User struct {
 }
 
 type URLModel interface {
-	GetURLByID(id int) (*URL, error)
-	GetAllURLOfUser(id int) ([]*URL, error)
-	CreateURL(url string) (*URL, error)
+	GetURLByID(id int) (*models.URL, error)
+	GetAllURLOfUser(id int) ([]*models.URL, error)
+	CreateURL(url string) (*models.URL, error)
 	UpdateURLByID(id int) error
 	DeleteURLByID(id int) error
-}
-
-type UserModel interface {
-	GetUserByID(id int) (*User, error)
-	CreateUser(email, password string) (*User, error)
-	DeleteUserByID(id int) error
-	UpdateUser(id int) error
 }

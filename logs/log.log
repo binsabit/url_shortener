@@ -5,3 +5,5 @@ ERROR	2023/06/11 23:47:10 config.go:36: cannot configure server portopen .env: n
 ERROR	2023/06/12 00:04:20 config.go:36: cannot configure server portopen ./config/.env: no such file or directory
 ERROR	2023/06/12 00:07:24 config.go:36: cannot configure server portopen ./config/: no such file or directory
 ERROR	2023/06/12 00:15:58 config.go:36: cannot configure server port open .env: no such file or directory
+ERROR	2023/06/12 06:54:44 config.go:36: cannot configure server port open .env: no such file or directory
+ERROR	2023/06/12 07:00:16 config.go:36: cannot configure server port open ./config/.env: no such file or directory

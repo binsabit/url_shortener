@@ -3,10 +3,8 @@ package api
 import (
 	"log"
 	"net/http"
-	"os"
 
 	Logger "github.com/binsabit/url_shortener/pkg/log"
-	"github.com/joho/godotenv"
 )
 
 type config struct {
@@ -28,14 +26,15 @@ func ConfigureAndStart() {
 	if err != nil {
 		log.Fatal("connot configure logger", err)
 	}
+
 	var cfg config
 
-	err = godotenv.Load(".env")
-
+	// err = godotenv.Load(".env")
+	cfg.port = "3000"
 	if err != nil {
 		errorLogger.Fatal("cannot configure server port ", err)
 	}
-	cfg.port = os.Getenv("SERVER_PORT")
+	// cfg.port = os.Getenv("SERVER_PORT")
 
 	app := application{
 		InfoLogger:  infoLogger,
